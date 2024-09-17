@@ -1,65 +1,57 @@
-# vision README
+# Vision Account Extension
 
-This is the README for your extension "vision". After writing up a brief description, we recommend including the following sections.
+This VS Code extension provides two main commands available through the command palette:
+
+- **Login**: Allows you to log in to your Vision account using a username and password.
+- **Sync**: Synchronizes the current code you're working on with your Vision account.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+### 1. Login Command
 
-For example if there is an image subfolder under your extension project workspace:
+The **Login** command prompts the user to enter their Vision account credentials (username and password) directly from the VS Code command palette.
 
-\!\[feature X\]\(images/feature-x.png\)
+- **How it works**:
+  - When you run the `Login` command, you'll be prompted to enter your username and password.
+  - The extension will send these credentials to the Vision API for authentication.
+  - Upon successful login, your access and refresh tokens are securely stored in the global state of VS Code for future use.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### 2. Sync Command
+
+The **Sync** command helps you synchronize the current code you are working on with your Vision account.
+
+- **How it works**:
+  - After logging in, you can run the `Sync` command to send the current open files or the entire workspace to your Vision account.
+  - This allows you to back up or sync your code with the cloud for collaboration or storage purposes.
+
+## How to Use
+
+1. Open the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on macOS).
+2. Type **Vision: Login** to log in with your Vision account.
+   - Enter your username and password when prompted.
+3. After successfully logging in, type **Vision: Sync** to synchronize your current project.
+
+## Installation
+
+1. Install the extension from the [VS Code Marketplace](#).
+2. Open your VS Code, and use the command palette to run the available commands.
+
+## Available Commands
+
+| Command           | Description                                                                   |
+| ----------------- | ----------------------------------------------------------------------------- |
+| **Vision: Login** | Prompts you to enter your Vision account credentials (username and password). |
+| **Vision: Sync**  | Synchronizes your current workspace or open files with your Vision account.   |
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- Node.js and npm (for development)
+- A Vision account for using the login and sync features
 
-## Extension Settings
+## Contributing
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+Feel free to open issues or submit pull requests for any bugs or new features.
 
-For example:
+## License
 
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
